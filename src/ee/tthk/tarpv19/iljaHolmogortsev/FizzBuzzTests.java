@@ -30,6 +30,13 @@ class FizzBuzzTests {
 		
 		assertEquals(expected, fb.getFizz());
 	}
+	@Test
+	void shouldReturnBuzzInstedOfNumberThatDividedByFive() {
+		FizzBuzz fb = new FizzBuzz();
+		String expected = "1 2 3 4 Buzz 6 7 8 9 Buzz 11 12 13 14 Buzz 16 17 18 19 Buzz ";
+		
+		assertEquals("", fb.getBuzz());
+	}
 	
 	
 

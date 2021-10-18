@@ -29,5 +29,9 @@ public class FizzBuzz {
 		
 		return result;
 	}
+	
+	public String getBuzz() {
+		return "123";
+	}
 
 }
