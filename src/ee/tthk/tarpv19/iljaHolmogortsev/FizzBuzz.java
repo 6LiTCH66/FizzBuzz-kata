@@ -15,7 +15,19 @@ public class FizzBuzz {
 	
 	
 	public String getFizz() {
-		return "1 2 Fizz 4 5 Fizz 7 8 Fizz 10 11 Fizz 13 14 Fizz 16 17 Fizz 19 20 ";
+		String result = "";
+		for (Integer num: getNumbers().subList(0, 20) ) {
+			if ((num % 3) == 0) {
+				result += "Fizz ";
+			}
+			else {
+				result += num.toString() + " ";
+			}
+			
+		}
+		System.out.print(result);
+		
+		return result;
 	}
 
 }
