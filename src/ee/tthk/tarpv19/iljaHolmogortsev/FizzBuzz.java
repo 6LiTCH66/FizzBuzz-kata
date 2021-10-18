@@ -25,13 +25,23 @@ public class FizzBuzz {
 			}
 			
 		}
-		System.out.print(result);
 		
 		return result;
 	}
 	
 	public String getBuzz() {
-		return "1 2 3 4 Buzz 6 7 8 9 Buzz 11 12 13 14 Buzz 16 17 18 19 Buzz ";
+		String result = "";
+		for (Integer num: getNumbers().subList(0, 20) ) {
+			if ((num % 5) == 0) {
+				result += "Buzz ";
+			}
+			else {
+				result += num.toString() + " ";
+			}
+			
+		}
+		
+		return result;
 	}
 
 }
