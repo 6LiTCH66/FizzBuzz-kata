@@ -28,7 +28,7 @@ class FizzBuzzTests {
 		FizzBuzz fb = new FizzBuzz();
 		String expected = "1 2 Fizz 4 5 Fizz 7 8 Fizz 10 11 Fizz 13 14 Fizz 16 17 Fizz 19 20 ";
 		
-		assertEquals("", fb.getFizz());
+		assertEquals(expected, fb.getFizz());
 	}
 	
 	
