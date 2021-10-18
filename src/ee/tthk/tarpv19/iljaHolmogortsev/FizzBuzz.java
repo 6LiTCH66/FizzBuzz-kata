@@ -10,11 +10,12 @@ public class FizzBuzz {
 			numbers.add(i);
 		}
 		
-		for(Integer num: numbers) {
-			System.out.print(num + " ");
-		}
-		
 		return numbers;
+	}
+	
+	
+	public String getFizz() {
+		return "1234";
 	}
 
 }
