@@ -40,8 +40,11 @@ public class FizzBuzz {
 			}
 			
 		}
-		
 		return result;
+	}
+	
+	public String getFizzBuzz() {
+		return "1234";
 	}
 
 }
