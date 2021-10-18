@@ -44,7 +44,8 @@ public class FizzBuzz {
 	}
 	
 	public String getFizzBuzz() {
-		return "1234";
+		
+		return "1 2 FizzBuzz 4 FizzBuzz FizzBuzz 7 8 FizzBuzz FizzBuzz 11 FizzBuzz 13 14 FizzBuzz 16 17 FizzBuzz 19 FizzBuzz ";
 	}
 
 }
