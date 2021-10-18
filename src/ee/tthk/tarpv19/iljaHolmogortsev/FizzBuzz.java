@@ -44,8 +44,19 @@ public class FizzBuzz {
 	}
 	
 	public String getFizzBuzz() {
-		
-		return "1 2 FizzBuzz 4 FizzBuzz FizzBuzz 7 8 FizzBuzz FizzBuzz 11 FizzBuzz 13 14 FizzBuzz 16 17 FizzBuzz 19 FizzBuzz ";
+		String result = "";
+		for (Integer num: getNumbers().subList(0, 20) ) {
+			if ((num % 3) == 0) {
+				result += "FizzBuzz ";
+			}
+			else if((num % 5) == 0) {
+				result += "FizzBuzz ";
+			}
+			else {
+				result += num.toString() + " ";
+			}
+		}
+		return result;
 	}
 
 }
