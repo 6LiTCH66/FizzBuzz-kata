@@ -3,11 +3,12 @@ package ee.tthk.tarpv19.iljaHolmogortsev;
 import java.util.ArrayList;
 
 public class FizzBuzz {
-	public ArrayList<Integer> getNumbers() {
-		ArrayList<Integer> numbers = new ArrayList<Integer>();
+	int[] numbers;
+	public int[] getNumbers() {
+		numbers = new int[100];
 		
-		for (int i = 1; i < 101; i++) {
-			numbers.add(i);
+		for (int i = 0; i < numbers.length; i++) {
+			numbers[i] = i + 1;
 		}
 		
 		return numbers;
