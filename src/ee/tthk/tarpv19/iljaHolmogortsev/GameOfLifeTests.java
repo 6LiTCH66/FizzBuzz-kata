@@ -34,6 +34,25 @@ class GameOfLifeTests {
 		
 		assertEquals(CellState.DEAD, actual.getState());
 	}
+	@Test
+	void createRandomCell() {
+		GameOfLife gol = new GameOfLife();
+		
+		boolean living = false;
+		boolean dead = false;
+		
+		for	(int i = 0; i < 10; i++) {
+			Cell actual = gol.createCell();
+			if(actual.getState() == CellState.LIVING) {
+				living = true;
+			}
+			if(actual.getState() == CellState.DEAD) {
+				dead = true;
+			}
+		}
+		
+		assertTrue(living && dead);
+	}
 	
 
 }
