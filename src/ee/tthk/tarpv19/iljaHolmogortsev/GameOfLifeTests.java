@@ -2,6 +2,9 @@ package ee.tthk.tarpv19.iljaHolmogortsev;
 
 import static org.junit.jupiter.api.Assertions.*;
 
+import java.util.ArrayList;
+import java.util.List;
+
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
@@ -23,5 +26,14 @@ class GameOfLifeTests {
 		
 		assertEquals(CellState.LIVING, actual.getState());
 	}
+	
+	@Test
+	void createDeadCell() {
+		GameOfLife gol = new GameOfLife();
+		Cell actual = gol.createCell(CellState.DEAD);
+		
+		assertEquals(CellState.DEAD, actual.getState());
+	}
+	
 
 }
