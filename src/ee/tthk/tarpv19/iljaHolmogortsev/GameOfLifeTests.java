@@ -17,8 +17,11 @@ class GameOfLifeTests {
 	}
 
 	@Test
-	void test() {
-		fail("Not yet implemented");
+	void createLivingCell() {
+		GameOfLife gol = new GameOfLife();
+		Cell actual = gol.createCell(CellState.LIVING);
+		
+		assertEquals(CellState.LIVING, actual.getState());
 	}
 
 }

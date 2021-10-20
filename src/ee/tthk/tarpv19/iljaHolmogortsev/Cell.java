@@ -1,10 +1,11 @@
 package ee.tthk.tarpv19.iljaHolmogortsev;
 
-public class GameOfLife {
+public class Cell {
 
-	public Cell createCell(CellState states) {
+	public CellState getState() {
 		// TODO Auto-generated method stub
 		return null;
 	}
 	
+
 }
