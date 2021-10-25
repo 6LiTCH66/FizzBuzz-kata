@@ -49,6 +49,16 @@ class GameOfLifeTests {
 		assertEquals(CellState.DEAD, actual);
 	}
 	
+	@Test
+	void DeadCellWithExactlyThreeNB() {
+		GameOfLife gol = new GameOfLife();
+		int liveNeighbors = 1;
+		
+		CellState actual = gol.createCell(CellState.DEAD, liveNeighbors);
+		
+		assertEquals(CellState.LIVING, actual);
+	}
+	
 	
 	@Test
 	void createRandomCell() {
