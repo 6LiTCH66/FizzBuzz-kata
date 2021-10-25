@@ -22,17 +22,17 @@ class GameOfLifeTests {
 	@Test
 	void createLivingCell() {
 		GameOfLife gol = new GameOfLife();
-		Cell actual = gol.createCell(CellState.LIVING);
+		CellState actual = gol.createCell(CellState.LIVING);
 		
-		assertEquals(CellState.LIVING, actual.getState());
+		assertEquals(CellState.LIVING, actual);
 	}
 	
 	@Test
 	void createDeadCell() {
 		GameOfLife gol = new GameOfLife();
-		Cell actual = gol.createCell(CellState.DEAD);
+		CellState actual = gol.createCell(CellState.DEAD);
 		
-		assertEquals(CellState.DEAD, actual.getState());
+		assertEquals(CellState.DEAD, actual);
 	}
 	@Test
 	void createRandomCell() {
@@ -42,11 +42,12 @@ class GameOfLifeTests {
 		boolean dead = false;
 		
 		for	(int i = 0; i < 10; i++) {
-			Cell actual = gol.createCell();
-			if(actual.getState() == CellState.LIVING) {
+			CellState actual = gol.createCell();
+			if(actual == CellState.LIVING) {
 				living = true;
 			}
-			if(actual.getState() == CellState.DEAD) {
+			
+			if(actual == CellState.DEAD) {
 				dead = true;
 			}
 		}

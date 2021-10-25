@@ -2,14 +2,14 @@ package ee.tthk.tarpv19.iljaHolmogortsev;
 
 public class GameOfLife {
 
-	public Cell createCell(CellState states) {
+	public CellState createCell(CellState states) {
 		
-		return null;
+		return states;
 	}
 	
-	public Cell createCell() {
+	public CellState createCell() {
 		
-		return null;
+		return CellState.values()[(int) (Math.random() * CellState.values().length)];
 	}
 	
 }
