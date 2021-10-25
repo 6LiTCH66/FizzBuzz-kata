@@ -52,7 +52,7 @@ class GameOfLifeTests {
 	@Test
 	void DeadCellWithExactlyThreeNB() {
 		GameOfLife gol = new GameOfLife();
-		int liveNeighbors = 1;
+		int liveNeighbors = 3;
 		
 		CellState actual = gol.createCell(CellState.DEAD, liveNeighbors);
 		
