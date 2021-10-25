@@ -22,18 +22,21 @@ class GameOfLifeTests {
 	@Test
 	void createLivingCell() {
 		GameOfLife gol = new GameOfLife();
-		CellState actual = gol.createCell(CellState.LIVING);
+		int liveNeighbors = 3; 
 		
+		CellState actual = gol.createCell(CellState.LIVING, liveNeighbors);
 		assertEquals(CellState.LIVING, actual);
 	}
 	
 	@Test
 	void createDeadCell() {
 		GameOfLife gol = new GameOfLife();
-		CellState actual = gol.createCell(CellState.DEAD);
+		int liveNeighbors = 4;
 		
+		CellState actual = gol.createCell(CellState.DEAD, liveNeighbors);
 		assertEquals(CellState.DEAD, actual);
 	}
+	
 	@Test
 	void createRandomCell() {
 		GameOfLife gol = new GameOfLife();
@@ -42,7 +45,8 @@ class GameOfLifeTests {
 		boolean dead = false;
 		
 		for	(int i = 0; i < 10; i++) {
-			CellState actual = gol.createCell();
+			CellState actual = gol.createCell(i);
+			System.out.println(actual.name());
 			if(actual == CellState.LIVING) {
 				living = true;
 			}
