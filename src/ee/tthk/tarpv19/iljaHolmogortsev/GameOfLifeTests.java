@@ -24,9 +24,9 @@ class GameOfLifeTests {
 		GameOfLife gol = new GameOfLife();
 		int liveNeighbors = 3;
 		
-		CellState actual = gol.createCell(CellState.LIVING, liveNeighbors);
+		Cell actual = gol.createCell(CellState.LIVING, liveNeighbors);
 		
-		assertEquals(CellState.LIVING, actual);
+		assertEquals(CellState.LIVING, actual.getState());
 	}
 	
 	@Test
@@ -34,9 +34,9 @@ class GameOfLifeTests {
 		GameOfLife gol = new GameOfLife();
 		int liveNeighbors = 4;
 		
-		CellState actual = gol.createCell(CellState.DEAD, liveNeighbors);
+		Cell actual = gol.createCell(CellState.DEAD, liveNeighbors);
 		
-		assertEquals(CellState.DEAD, actual);
+		assertEquals(CellState.DEAD, actual.getState());
 	}
 	
 	@Test
@@ -44,9 +44,9 @@ class GameOfLifeTests {
 		GameOfLife gol = new GameOfLife();
 		int liveNeighbors = 1;
 		
-		CellState actual = gol.createCell(CellState.LIVING, liveNeighbors);
+		Cell actual = gol.createCell(CellState.LIVING, liveNeighbors);
 		
-		assertEquals(CellState.DEAD, actual);
+		assertEquals(CellState.DEAD, actual.getState());
 	}
 	
 	@Test
@@ -54,9 +54,9 @@ class GameOfLifeTests {
 		GameOfLife gol = new GameOfLife();
 		int liveNeighbors = 3;
 		
-		CellState actual = gol.createCell(CellState.DEAD, liveNeighbors);
+		Cell actual = gol.createCell(CellState.DEAD, liveNeighbors);
 		
-		assertEquals(CellState.LIVING, actual);
+		assertEquals(CellState.LIVING, actual.getState());
 	}
 	
 	@Test
@@ -64,9 +64,9 @@ class GameOfLifeTests {
 		GameOfLife gol = new GameOfLife();
 		int liveNeighbors = 2;
 		
-		CellState actual = gol.createCell(CellState.LIVING, liveNeighbors);
+		Cell actual = gol.createCell(CellState.LIVING, liveNeighbors);
 		
-		assertEquals(CellState.LIVING, actual);
+		assertEquals(CellState.LIVING, actual.getState());
 	}
 	
 	
@@ -78,12 +78,12 @@ class GameOfLifeTests {
 		boolean dead = false;
 		
 		for	(int i = 0; i < 10; i++) {
-			CellState actual = gol.createCell(i);
-			if(actual == CellState.LIVING) {
+			Cell actual = gol.createCell(i);
+			if(actual.getState() == CellState.LIVING) {
 				living = true;
 			}
 			
-			if(actual == CellState.DEAD) {
+			if(actual.getState() == CellState.DEAD) {
 				dead = true;
 			}
 		}
