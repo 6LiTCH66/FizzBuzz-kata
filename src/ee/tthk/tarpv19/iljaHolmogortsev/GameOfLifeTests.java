@@ -66,7 +66,7 @@ class GameOfLifeTests {
 		
 		CellState actual = gol.createCell(CellState.LIVING, liveNeighbors);
 		
-		assertEquals(CellState.DEAD, actual);
+		assertEquals(CellState.LIVING, actual);
 	}
 	
 	
